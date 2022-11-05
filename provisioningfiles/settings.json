@@ -1,0 +1,186 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Settings file to main python script",
+    "version": "2022-10-12"
+  },
+  "usergroups": {
+    "fredrik.karlsson": ["Fredrik Karlsson", "se-network"],
+    "fredrik.westman": ["Fredrik Westman", "se-network"],
+    "peter.cederholm": ["Peter Cederholm", "se-network"],
+    "robin.carlsson": ["Robin Carlsson", "se-network"],
+    "walsjo2": ["Waldemar Sjöblom", "tk-broadband"],
+    "jakeri": ["Jakob Eriksson", "tk-broadband"]
+  },
+  "Management": [
+    "10.128.100.0 0.0.255.255",
+    "10.144.200.0 0.0.1.255",
+    "10.144.202.0 0.0.1.255",
+    "10.155.104.0 0.0.0.255"
+  ],
+  "DNS": {
+    "Servers": [
+      "10.128.150.10",
+      "10.128.150.11"
+    ],
+    "Name": {
+      "se-network": "infra.local",
+      "tk-broadband": "kba.local"
+    },
+    "Master": "dhcp003.kba.local"
+  },
+  "ActiveDirectory": {
+    "Prefix": "KBA\\admin."
+  },  
+  "VTP": "KBA",
+  "onedrive": {
+    "se-network": [
+      "Kungsbacka kommun",
+      "SE Digitalt center - Infra"
+    ],
+    "tk-broadband": [
+      "Kungsbacka kommun",
+      "Kommunens Datanätverk - General"
+    ],
+    "personal_documents": [
+      "OneDrive - Kungsbacka kommun",
+      "Dokument"
+    ]
+  },
+  "byggnadsregister": {
+    "path": [
+      "Siter",
+      "byggnadsregister.xlsx"
+    ]  
+  },
+  "testhost": "whatismyip.akamai.com",
+  "NTP": {
+    "Peer": [
+      "10.128.100.61",
+      "10.128.100.62"
+    ],
+    "Access": [
+      "10.128.100.0 0.0.3.255"
+    ]
+  },
+  "Solarwinds": {
+    "URL": "solarwinds.kungsbacka.se",
+    "APIport": "17778",
+    "verifycert": true,
+    "ipaddress": [
+      "10.30.1.112"
+    ],
+    "snmpv3_credential_id": 13,
+    "orion_engine_id": 2
+  },
+  "Forbidden": [
+    "172.16.0.0/12",
+    "10.128.100.0/22"
+  ],
+  "SecureCRT": {
+    "path": [
+      "SecureCRT"
+    ],
+    "provisioning": "Provisioning",
+    "logs": "Logs",
+    "backup": "Backup"
+  },
+  "Python": {
+    "path": [
+      "Programvara",
+      "SecureCRT"
+    ],
+    "version39": 13,
+    "filenameWindows39": "python-3.9.13-amd64.exe",
+    "version310": 6,
+    "filenameWindows310": "python-3.10.6-amd64.exe"
+  }, 
+  "NAS": "10.128.101.23",
+  "SSMS": {
+    "URL": "mgmt124.kba.local",
+    "uri_cslu": "/cslu/v1/pi/Kungsbacka3-1",
+    "uri_smart": "/SmartTransport",
+    "uri_callhome": "/Transportgateway/services/DeviceRequestHandler"
+  },
+  "USBserial": {
+    "approved": [
+      "2303:067B",
+      "2304:067B",
+      "23A3:067B",
+      "23B3:067B",
+      "23C3:067B",
+      "23D3:067B",
+      "23E3:067B",
+      "23F3:067B",
+      "0009:05A6",
+      "2008:0557",
+      "6001:0403",
+      "6010:0403",
+      "6011:0403",
+      "6014:0403",
+      "6015:0403",
+      "6031:0403",
+      "6032:0403",
+      "6033:0403",
+      "6034:0403",
+      "6035:0403",
+      "6036:0403",
+      "6037:0403",
+      "6038:0403",
+      "6039:0403",
+      "603A:0403",
+      "6040:0403",
+      "6041:0403",
+      "6042:0403",
+      "6043:0403",
+      "6044:0403",
+      "6045:0403",
+      "6047:0403",
+      "6048:0403",
+      "6049:0403",
+      "0000:0403"
+    ]
+  },
+  "doc_url": {
+    "se-network": "https://kungsbackakommun.sharepoint.com/sites/sedigitaltcenter/_layouts/OneNote.aspx?id=%2Fsites%2Fsedigitaltcenter%2FDelade%20dokument%2FInfra%2FOneNote%2FSystemdokumentation&wd=target%28Scripts.one%7C8C64F4E5-7F83-4A0B-81D1-E485D67C9FC7%2FCisco%20Provisioning%20Script%7CC3C8142B-C2B9-408C-85D1-247DC2CE16A3%2F%29",
+    "se-network": "https://kungsbackakommun.sharepoint.com/sites/sedigitaltcenter/_layouts/OneNote.aspx?id=%2Fsites%2Fsedigitaltcenter%2FDelade%20dokument%2FInfra%2FOneNote%2FSystemdokumentation&wd=target%28Scripts.one%7C8C64F4E5-7F83-4A0B-81D1-E485D67C9FC7%2FCisco%20Provisioning%20Script%7CC3C8142B-C2B9-408C-85D1-247DC2CE16A3%2F%29"
+  },
+  "secretskeyfile": {
+    "se-network": {
+      "hash": "9c2255f1e67ff9c269602c76987e9a8f",
+      "url": "https://kungsbackakommun-my.sharepoint.com/:u:/g/personal/fredrik_karlsson_kungsbacka_se/EaY44pIvM7tGkCBj_P3ktz0BWlBvj9v-025xgnd5oHzEwA?e=RBlxt5"
+    },
+    "tk-broadband": {
+      "hash": "9c2255f1e67ff9c269602c76987e9a8f",
+      "url": "https://kungsbackakommun-my.sharepoint.com/:u:/g/personal/fredrik_karlsson_kungsbacka_se/EaY44pIvM7tGkCBj_P3ktz0BWlBvj9v-025xgnd5oHzEwA?e=RBlxt5"
+    }
+  },
+  "DNAC": {
+    "URL": "dnac.infra.local",
+    "APIport": "443",
+    "verifycert": true,
+    "api_rate_limit": 50
+  },
+  "ISE": {
+    "MNT": {
+      "APIport": "443",
+      "verifycert": true,
+      "Nodes": [
+        "ise-mnt-01.infra.local",
+        "ise-mnt-02.infra.local"
+      ]
+    },
+    "PSN": {
+      "Nodes": [
+        "ise-psn-01.infra.local",
+        "ise-psn-02.infra.local",
+        "ise-psn-03.infra.local"
+      ]
+    },
+    "PAN": {
+      "URL": "ise-pan-02.infra.local",
+      "APIport": "9060",
+      "verifycert": true
+    }
+  }
+}
