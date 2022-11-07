@@ -1,0 +1,17 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Groups file to main python script",
+    "version": "2021-12-04"
+  },
+  "1": {
+    "name": "Description1",
+    "id": "id from api",
+    "profile": ""
+  },
+  "2": {
+    "name": "Description2",
+    "id": "id from api",
+    "profile": ""
+  }
+}

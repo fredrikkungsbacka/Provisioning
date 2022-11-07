@@ -1,0 +1,28 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Networks file to main python script",
+    "version": "2021-12-04"
+  },
+  "10": {
+    "name": "#MGMT",
+    "netmask": "255.255.255.0",
+    "gateway": "192.168.10.254",
+    "voice": false,
+    "quarantine": false,
+    "ibns2": false,
+    "ise": false
+  },
+  "11": {
+    "name": "#MGMT",
+    "netmask": "255.255.255.0",
+    "gateway": "192.168.11.254",
+    "voice": false,
+    "quarantine": {
+      "id": "99",
+      "name":"Quarantine"
+    },
+    "ibns2": false,
+    "ise": true
+  }
+}

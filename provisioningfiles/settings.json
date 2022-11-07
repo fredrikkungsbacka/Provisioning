@@ -1,0 +1,167 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Settings file to main python script",
+    "version": "2022-10-12"
+  },
+  "usergroups": {
+    "fredrik.karlsson": ["Fredrik Karlsson", "it-dept"],
+  },
+  "Management": [
+    "192.168.10.0 0.0.0.255"
+  ],
+  "DNS": {
+    "Servers": [
+      "192.168.10.10",
+      "192.168.10.11"
+    ],
+    "Name": {
+      "it-dept": "company.local"
+    },
+    "Master": "dns001.company.local"
+  },
+  "ActiveDirectory": {
+    "Prefix": "COMPANY\\admins."
+  },  
+  "VTP": "COMPANY",
+  "onedrive": {
+    "it-dept": [
+      "Company",
+      "IT Department"
+    ],
+    "personal_documents": [
+      "OneDrive - Company",
+      "Documents"
+    ]
+  },
+  "byggnadsregister": {
+    "path": [
+      "Siter",
+      "byggnadsregister.xlsx"
+    ]  
+  },
+  "testhost": "whatismyip.akamai.com",
+  "NTP": {
+    "Peer": [
+      "192.168.10.253",
+      "192.168.10.254"
+    ],
+    "Access": [
+      "192.168.10.0 0.0.0.255"
+    ]
+  },
+  "Solarwinds": {
+    "URL": "solarwinds.company.local",
+    "APIport": "17778",
+    "verifycert": true,
+    "ipaddress": [
+      "192.168.10.12"
+    ],
+    "snmpv3_credential_id": 13,
+    "orion_engine_id": 2
+  },
+  "Forbidden": [
+    "172.16.0.0/12",
+    "10.0.0.0/8"
+  ],
+  "SecureCRT": {
+    "path": [
+      "SecureCRT"
+    ],
+    "provisioning": "Provisioning",
+    "logs": "Logs",
+    "backup": "Backup"
+  },
+  "Python": {
+    "path": [
+      "Programvara",
+      "SecureCRT"
+    ],
+    "version39": 13,
+    "filenameWindows39": "python-3.9.13-amd64.exe",
+    "version310": 6,
+    "filenameWindows310": "python-3.10.6-amd64.exe"
+  }, 
+  "NAS": "192.168.10.13",
+  "SSMS": {
+    "URL": "ssms001.comapny.local",
+    "uri_cslu": "/cslu/v1/pi/somename-1",
+    "uri_smart": "/SmartTransport",
+    "uri_callhome": "/Transportgateway/services/DeviceRequestHandler"
+  },
+  "USBserial": {
+    "approved": [
+      "2303:067B",
+      "2304:067B",
+      "23A3:067B",
+      "23B3:067B",
+      "23C3:067B",
+      "23D3:067B",
+      "23E3:067B",
+      "23F3:067B",
+      "0009:05A6",
+      "2008:0557",
+      "6001:0403",
+      "6010:0403",
+      "6011:0403",
+      "6014:0403",
+      "6015:0403",
+      "6031:0403",
+      "6032:0403",
+      "6033:0403",
+      "6034:0403",
+      "6035:0403",
+      "6036:0403",
+      "6037:0403",
+      "6038:0403",
+      "6039:0403",
+      "603A:0403",
+      "6040:0403",
+      "6041:0403",
+      "6042:0403",
+      "6043:0403",
+      "6044:0403",
+      "6045:0403",
+      "6047:0403",
+      "6048:0403",
+      "6049:0403",
+      "0000:0403"
+    ]
+  },
+  "doc_url": {
+    "it-dept": "https url to doc"
+  },
+  "secretskeyfile": {
+    "it-dept": {
+      "hash": "md5 hash",
+      "url": "https://comapny-my.sharepoint.com/something"
+    }
+  },
+  "DNAC": {
+    "URL": "dna001.company.local",
+    "APIport": "443",
+    "verifycert": true,
+    "api_rate_limit": 50
+  },
+  "ISE": {
+    "MNT": {
+      "APIport": "443",
+      "verifycert": true,
+      "Nodes": [
+        "ise001.company.local",
+        "ise002.company.local"
+      ]
+    },
+    "PSN": {
+      "Nodes": [
+        "ise001.company.local",
+        "ise002.company.local"
+      ]
+    },
+    "PAN": {
+      "URL": "ise001.company.local",
+      "APIport": "9060",
+      "verifycert": true
+    }
+  }
+}
