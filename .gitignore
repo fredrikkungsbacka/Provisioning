@@ -1,7 +1,4 @@
 # my own files
-/provisioningfiles/*.enc
-secrets.json
-
 # pylint
 .pylintrc
 
