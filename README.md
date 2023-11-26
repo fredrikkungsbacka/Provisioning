@@ -16,4 +16,4 @@ The script and its all of its components are subject to confidentiality and may 
 
 For Kungsbacka kommun internal use only!
 
-Copyright 2018-2023 by Kungsbacka kommun
+Copyright 2018 by Kungsbacka kommun
