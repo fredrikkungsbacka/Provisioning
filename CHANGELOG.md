@@ -1,20 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/),
+and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-## [2024.2.3]
+## 2024.2.3
 - Coming soon!
 
-## [2024.2.2] - 2024-02-05
+## 2024.2.2
 ### Fixed
 - Problem med referens till filnamn för byggnadsregistret i settings.json
 - Payload felaktig vid discovery i Solarwinds på grund av felaktig placering av ny funktion
 
-## [2024.2.1]
+## 2024.2.1
 ### Added
 - Stöd för SecureCRT 9.5
 - Check_web_server har snabbats upp
@@ -35,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - "Remove node…" omdöpt till "Delete node…"
 - Copyright borttagen då den inte krävs sedan år 2000
 
-## [2023.10.2]
+## 2023.10.2
 ### Added
 - Stöd för RESTCONF
 - Verifiering av användardata från Passbolt
@@ -50,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ökad säkerhet för NETCONF-YANG
 - Ökad separation av användningen av variabeln secret
 
-## [2023.10.1]
+## 2023.10.1
 ### Added
 - Tar bort backup av SecureCRT då den kräver en mer avancerad hantering än vad som är värt besväret
 - Optimerat koden för integrationen med Passbolt
@@ -63,7 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Högre och konfigurerbar säkerhet vid användning av Powershell
 
-## [2023.9.4]
+## 2023.9.4
 ### Added
 - Minskat exponeringen av inloggningsuppgifter mellan moduler
 - Går nu att använda range för interfacekonfiguration
@@ -72,7 +70,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Saknat undantag vid retry i requests
 - Felstavning i alternativ 3 skapade en krasch
 
-## [2023.9.3]
+## 2023.9.3
 ### Fixed
 - Missade installation av modulen pgpy
 - sol_delete_node kunde krascha när nod tas bort i Solarwinds som redan är borttagen
@@ -81,13 +79,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fel lösenord i Passbolt orsakade en krasch
 - Problem att skapa SSH-sessioner när lösenorden är för komplexa på grund av specialtecken
 
-## [2023.9.2]
+## 2023.9.2
 ### Added
 - Rensat bort värden som baseras på grupptillhörighet
 ### Fixed
 - Backup misslyckades då "Single Instance" inte kunde sättas
 
-## [2023.9.1]
+## 2023.9.1
 ### Added
 - Istället för att hantera en krypterad fil med nycklar och lösenord, hämtas dessa numera i en integration med Passbolt
 - Ges möjlighet att ansluta en trunkport när enhet läggs till för övervakning från alternativ 2
@@ -104,7 +102,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Caveat
 - En bug gör att script och/eller applikationen kraschar när man gör en unlock på alla tabar och sedan använder tab-objektet. Detta gör att det kommando som låste upp alla tabar måste tas bort. Innebär att om en tab är låst och scriptet talar med denna, kraschar scriptet med förklaringen att taben är låst.
 
-## [2023.8.1]
+## 2023.8.1
 ### Added
 - Stöd för att lägga till KBN-enheter i övervakningen
 - Ny och säkrare hantering av behörigheter
@@ -132,7 +130,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Begränsa LLDP på trunkar och extern accessport. Detta kokar ned tabellen till enbart de enheter som syns på en lokal accessport
 
-## [2023.5.1]
+## 2023.5.1
 ### Added
 - Integration med Cisco Firepower Management Center
 - Bättre hantering av fel vid decodning av json-filer
@@ -140,7 +138,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Ogiltiga namn i moduler för Solarwinds enligt pylint
 
-## [2023.4.4]
+## 2023.4.4
 ### Added
 - Vid provisionering av ny enhet och ip eller namn redan existerar, tas vlan interface bort och hostnamn rensas
 - Alternativ som skapar trunkar gav inget portexempel när switchen har en modul för trunkar
@@ -150,7 +148,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Storm-control av multicast ökades till 20% på access-portar
 
-## [2023.4.3]
+## 2023.4.3
 ### Added
 - Mall för nya enheter i ISE sätts nu i settings.json
 - Nytt alternativ för att ansluta serieport med 115200 baud
@@ -160,7 +158,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Funktionen put_personal_settings använde fel kodtabell
 - Meny 20 hade fel ikon i dialogrutorna
 
-## [2023.4.2]
+## 2023.4.2
 ### Added
 - Funktionen cisco_encrypt använder nu modulen hashlib istället för scrypt, som utgår
 - Snabbat upp skrift till skärm genom att inte lässa sessions-config varje gång funktionen crt_sendline anropas
@@ -172,7 +170,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 - Stöd för SecureCRT version 9.2 tas bort
 
-## [2023.4.1]
+## 2023.4.1
 ### Fixed
 - Två fel från tidigare version rättade
 - Fel i alternativ 40 gjorde att dialogen loopade när ett fel inträffade
@@ -180,7 +178,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ett fel i uppgraderingsmodulen påverkade ISL-kompatibla enheter. Använder numera port_trunk för att skapa en trunkport
 - Funktionen för namnbyte blev aldrig riktigt synlig när den lanserades. Fixade detta samt verifiering av nytt hostnamn i funktionen
 
-## [2023.3.2]
+## 2023.3.2
 ### Added
 - Aktiverar DOM monitoring på modeller som stödjer detta
 - Stöd för USB adaptrar från SiLabs
@@ -192,7 +190,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tagit bort stack-oid som separat värde, det är en effekt av stackwise
 - Stöd för Netconf enbart för IOS-XE
 
-## [2023.3.1]
+## 2023.3.1
 ### Added
 - Statusmeddelanden till cli för flera av kontrollfunktionerna
 - Nätverksmoduler i switchar hämtas nu från models.json istället för i koden
@@ -203,11 +201,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 - Tar bort stöd för Python 3.10 då en modul inte stödjer detta
 
-## [2023.2.3]
+## 2023.2.3
 ### Added
 - Bättre felmeddelanden för seriesessioner
 
-## [2023.2.2]
+## 2023.2.2
 ### Added
 - Lagt in ett tidigare separat verktyg
 - Menyn för alternativ 20 byggs nu på samma sätt som huvudmenyn
@@ -224,7 +222,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Mitigerar CVE-2023-20076
 
-## [2023.2.1]
+## 2023.2.1
 ### Added
 - Uppgradering bryts ut som en funktion som kan återanvändas, detta minskar komplexiteten
 - Menyn bryts ut som en funktion för att kunna återanvändas i andra script
@@ -239,17 +237,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - "ip routing" finns inte på IE-3300
 - Felhantering vid skapande av seriesession i alternativ 2 har fallit bort
 
-## [2023.1.6]
+## 2023.1.6
 ### Added
 - Nytt alternativ som sparar aktiv session till Session Manager
 
-## [2023.1.5]
+## 2023.1.5
 ### Fixed
 - Omsync till DNA-Center misslyckades då payload var felaktig
 - KBN trunk kan inte använda ADD, så EEM-scriptet måste tas bort och lägga till
 - EEM stöds inte av alla modeller
 
-## [2023.1.4]
+## 2023.1.4
 ### Added
 - Varning när interface uppdateras på en enhet som inte är upplagd i Solarwinds, har nu tagits bort
 - Nytt alternativ för att döpa om en enhet i alla system, och även på själva enheten via SSH
@@ -260,18 +258,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Slutar logga ntp
 - Power budget för IE3300 var för låg
 
-## [2023.1.3]
+## 2023.1.3
 ### Added
 - Alternativ två stänger inte länge av sessionen
 
-## [2023.1.2]
+## 2023.1.2
 ### Fixed
 - (Connection timed out) vid uppgradering
 - Tagit bort insamling av output vid Local Shell, detta gav intermittenta problem att avsluta session
 ### Changed
 - Lagt till EEM-script vid provisionering som förhindrar vanliga misstag
 
-## [2023.1.1]
+## 2023.1.1
 ### Added
 - Variablerna username och group sätts nu via systemenv
 - Snabbat upp ssh och serie-sessioner
@@ -282,23 +280,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fel i alternativ 13 som kraschade scriptet på switch med IOS-XE
 - Ibland detekterades inte ett slutfört kommando i CMD
 
-## [2.1.7]
+## 2.1.7
 ### Fixed
 - Fel vid installation och uppdatering av moduler pga tecken från vissa moduler
 
-## [2.1.6]
+## 2.1.6
 ### Fixed
 - Optimerad laddning av externa moduler
 ### Deprecated
 - Modulen python-certifi-win32 supporteras inte längre, byts ut mot pip-system-certs
 
-## [2.1.5]
+## 2.1.5
 ### Fixed
 - Hanteringen av serieportar kunde fela i alternativ 40
 ### Deprecated
 - RDP-sessioner via script är från SecureCRT version 9.4 inte längre supporterat
 
-## [2.1.4]
+## 2.1.4
 ### Added
 - Restricted QoS på accessport försvinner
 - Helt gjort om hur stackar hanteras samt rättat en del fel på vägen
@@ -308,7 +306,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ett fel smög sig in från förra versionen som rör identifiering av interface i kluster
 - Ändrat användningen av begreppet cluster till stack, betyder olika saker
 
-## [2.1.3]
+## 2.1.3
 ### Added
 - Stöd för NETCONF
 - Stöd för WS-C3560CX-12PD med multigig trunkportar
@@ -317,7 +315,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Screen Sync kunde i vissa fall bli felaktig
 - Funktionen get_model kunde krascha ibland av okänd anledning
 
-## [2.1.2]
+## 2.1.2
 ### Added
 - Uppdatering av moduler kan nu skjutas upp
 - Verifiering om en switch är ansluten sker innan borttagning med val 4
@@ -325,7 +323,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Val 3 tog inte hänsyn till att description på port kunde ha olika strängar
 
-## [2.1.1]
+## 2.1.1
 ### Added
 - För en extern accessport görs nu även en shut/no shut
 - Nytt alternativ för att rensa en port och markera som FREE
@@ -339,7 +337,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - I meny 11 tas ordet ISE bort då det inte enbart kunde producera ISE-accessportar
 - Smart license transport cslu var felstavat
 
-## [2.10.3]
+## 2.10.3
 ### Added
 - Sätter sessionsoptioner för RDP
 - Hur menyn skapas är helt omskriven
@@ -350,7 +348,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - När portkonfigurationer utförs (10-14) görs ingen unlock av tab när ett fel uppstår
 
-## [2.10.2]
+## 2.10.2
 ### Added
 - Möjlighet till gruppinställningar baserat på inloggad användare
 - Verifiering av inloggad användare mot lista av godkända
@@ -361,7 +359,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Krash i rapport 32 om inga multigig-portar finns
 - Auth prompt enbart giltigt i ssh-sessioner
 
-## [2.10.1]
+## 2.10.1
 ### Added
 - Backup av SecureCRT konfiguration varje månad
 - Nödvändig katalogstruktur skapas om den saknas
@@ -373,7 +371,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Device classifier aktiveras nu som standard
 
-## [2.9.5]
+## 2.9.5
 ### Added
 - Quickfix avslutas om ett felaktigt kommando påträffas
 - Applicerar protocol NO-OP på alla SSH-sessioner
@@ -387,7 +385,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Missförstånd med en funktion i API gjorde att en flik där script körs, fortfarande försökte stängas (från 2022.9.2)
 - Inkonsekvent syftning i text och kommentarer
 
-## [2.9.4]
+## 2.9.4
 ### Fixed
 - Städat bort ett par bortglömda rader för tester
 - Funktionen crt_connect_ssh städar nu inmatade värden från skräptecken
@@ -398,23 +396,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Smart license har ändrats, ny konfiguration avspeglar detta
 
-## [2.9.3]
+## 2.9.3
 ### Added
 - När en trunk- eller access-port skapas sätts samtidigt unpluggable i Solarwinds
 
-## [2.9.2]
+## 2.9.2
 ### Fixed
 - Funktionen ping validerades felaktigt på ett par ställen
 - Ändrat inkonsekventa svar från vissa funktioner
 - Flik där script körs kan inte stängas
 
-## [2.9.1]
+## 2.9.1
 ### Fixed
 - Profilnamnet för Config Manager blev fel om uppgradering av moduler skedde samtidigt som Config Manager inte aktivt användes
 - Förtydligat vilket konto som skall användas för DNS
 - Saknade verifiering av DNS master innan provisionering och borttagning av enhet
 
-## [2.7.1]
+## 2.7.1
 ### Added
 - Ny versionsnumrering som bygger på datum och ett löpande versionsnummer
 - Verifierar lokal sync av delade filer från Infras teams-kanal
@@ -443,7 +441,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tar bort stöd för Python 3.8
 - Tar bort stöd för MacOS, men bibehåller möjlighet att skala till andra os i framtiden
 
-## [2.6.8]
+## 2.6.8
 ### Added
 - Alla underfiler till scriptet ligger nu samlade i ett bibliotek
 - Stöd för SecureCRT 9.3
@@ -451,7 +449,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Automatiskt inventarienummer felade när man angav ett eget, samt stöd för test
 
-## [2.6.7]
+## 2.6.7
 ### Added
 - Ny funktion för manuell uppgradering och verifiering av programvaran i en switch
 - Verifiering av inventarienummer så att det inte återanvänds
@@ -460,32 +458,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vid borttagning av switch kan det fela om man anger ip
 - ise_delete_device kunde krascha under speciella omständigheter
 
-## [2.6.6]
+## 2.6.6
 ### Fixed
 - Hanterar krasch när felaktigt användarnamn anges för DNS-server
 - Fel uppstod när image redan finns på switch med install mode
 - Screen.Synchronous = True tas bort, hjälpte inte…
 - crt_sendline har nu alltid en 175ms fördröjning för varje rad. Den dynamiska varianten kan fela ibland troligen pga seriebuffertfel
 
-## [2.6.5]
+## 2.6.5
 ### Added
 - Kan startas som ett script med argument via SecureCRT Button Bar, och då direkt starta ett menyalternativ och avsluta scriptet efteråt
 ### Fixed
 - Städat bort funktion som glömts bort
 
-## [2.6.4]
+## 2.6.4
 ### Added
 - Ersätta funktion som frågar sessionsdatabas från ISE med DNA-Center istället. Ger mer och tillförlitligare information
 
-## [2.6.3]
+## 2.6.3
 ### Added
 - Snabbat på svar i dialoger där man kan välja mellan hostnamn och ipadress genom att inte vänta på dnsuppslag för ip
 
-## [2.6.2]
+## 2.6.2
 ### Added
 - Menyalternativ 41 försvinner. Switch anges istället i första dialogen i menyn
 
-## [2.6.1]
+## 2.6.1
 ### Added
 - Bättre dokumentation i port_trunk
 - Nytt menyalternativ som ansluter en switch med ssh
@@ -494,7 +492,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Förtydligat variabelnamn i put_personal_settings
 - Rate-limit för API-anrop till DNA-Center
 
-## [2.6.0]
+## 2.6.0
 ### Added
 - Snabbat på installation och uppdatering av moduler vilket minskar antalet omstarter av SecureCRT
 - Lägger till switch i DNA-Center
@@ -518,12 +516,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - "logging monitor debug"
 
-## [2.5.5]
+## 2.5.5
 ### Added
 - De alternativ som går, låser sessionen när scriptet körs för att undvika oavsiktlig input
 - Efter introduktion av DNS kan man nu ange både hostname, fqdn och ipadress i dialogerna
 	
-## [2.5.4]
+## 2.5.4
 ### Added
 - Adderar även PTR i DNS
 - Städat utseendet på menyer med input
@@ -531,7 +529,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Vissa endpoints skickade inte med all info vilket kraschade scriptet
 
-## [2.5.3]
+## 2.5.3
 ### Added
 - Likriktat alla input-dialoger
 - Tydligare informationsrutor
@@ -539,18 +537,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - aaa accounting update newinfo periodic 15 (Ändrat från 2880 minuter)
 
-## [2.5.2]
+## 2.5.2
 ### Added
 - Lägga till och ta bort DNS RR för switchens inventarienummer via PowerShell
 - ISEFindDeviceByIP returnerar nu även hostname om ip existerar
 - Input av namn på site blir striktare för att hantera DNSnamn korrekt
 
-## [2.5.1]
+## 2.5.1
 ### Fixed
 - Om man lämnar switchen mer än 60 minuter med en dialog, kommer exec-timeout göra att scriptet fallerar med att komma vidare då prompten är ändrad
 - Fel i detektering av tidigare provisionerad switch
 
-## [2.5.0]
+## 2.5.0
 ### Fixed
 - Förbättrat och likriktat verifiering av ansluten enhet i ConnectSSH
 - Lyckats använda type hints på ett inkonsekvent sätt, städat detta
@@ -592,34 +590,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ISE Syslog till MNT tas bort
 - Lade till "transport output none" på alla line
 
-## [2.4.5]
+## 2.4.5
 ### Fixed
 - Problem att detektera serieportar på nyare datorer, tagit bort notis om osupporterade serieportar
 - Två fel i tab-objektet vid uppgradering
 
-## [2.4.4]
+## 2.4.4
 ### Fixed
 - För vissa switchar kunde man inte skapa access eller trunk port om den normalt sett inte skulle ha en sådan port
 ### Added
 - Kontroll av modul i C9300 tas bort, är nu standard
 
-## [2.4.3]
+## 2.4.3
 ### Added
 - Kan nu lägga till en bredbandsenhet i ISE
 
-## [2.4.2]
+## 2.4.2
 ### Fixed
 - Rättat fel i inmatning av vlan, vlan mellan 50 och 99 ansågs ogiltiga
 - Fel i uppgraderingen gjorde att en reload aldrig utfördes då en retur saknades
 - Fel i funktionen SerialConnect gjorde att fel tab valdes, vilket kunde vara förödande
 
-## [2.4.1]
+## 2.4.1
 ### Added
 - Stöd för SecureCRT 9.2
 - Fix i alternativ 20 tas bort, felet avhjälps genom att göra en ny ISE-port istället
 - Alternativ 11 och 14 stänger porten tillfälligt under konfigurationen
 
-## [2.4.0]
+## 2.4.0
 ### Fixed
 - När en tab återanvändes blev den inte aktiv
 - Optimerat vilka kommandon som skrivs till switchen medans man fortfarande kan avbryta provisioneringen
@@ -643,11 +641,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Port-security städades
   Authentication event städades
 
-## [2.3.7]
+## 2.3.7
 ### Fixed
 - En viss typ av switch använder ett anpassat/felaktigt modellnummer på vissa ställen, vilket resulterar i att aktiv programversion inte detekteras
 
-## [2.3.6]
+## 2.3.6
 ### Fixed
 - Bytt tab mot space enligt PEP-8. Skapade problem i olika editorer
 - GetVersion felade ibland och kraschade scriptet, när texten inte fångades från cli
@@ -662,7 +660,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - "ip domain-lookup" skall numera vara "ip domain lookup"
 - Syntax för smart token är ändrat på C9K
 
-## [2.3.5]
+## 2.3.5
 ### Added
 - Stöd för install mode för utvalda switchar
 - Städat bort funktionen CleanFlash som integreras i övrig kod istället
@@ -678,22 +676,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - autoinstall är nu disablat som standard
 - "ip domain-name" är ändrat till "ip domain name"
 	
-## [2.3.4]
+## 2.3.4
 ### Fixed
 - En del mindre anpassningar efter kontakt med supporten hos Vandyke, och dokumentation
 
-## [2.3.3]
+## 2.3.3
 ### Fixed
 - Förbättrad hantering av seriesessioner. Kan nu hantera att flera serieadaptrar är anslutna
 - Ett fel uppstår när inga tabbar är öppna och scriptet körs med alternativ som kräver en seriesession, temporär lösning i väntan på ärende
 
-## [2.3.2]
+## 2.3.2
 ### Fixed
 - Felaktig hantering när usb-adaptern inte är supporterad/känd
 - Felaktig hantering när ingen usb-adapter är ansluten
 - Något har hänt i Windows vilket gör att vissa adaptrar inte identifierades rätt. Har ändrat hur en adapter identifieras
 
-## [2.3.1]
+## 2.3.1
 ### Added
 - Stänger numera inte aktuell tab när man startar en seriesession
 - Stänger seriesessionen efter sig
@@ -712,7 +710,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Förbättrad säkerhet i ssh
 
-## [2.3.0]
+## 2.3.0
 ### Added
 - Gör om hur versionen på os kontrolleras. Ständigt fel med denna på något sätt, särskilt med IOS-XE
 - Med ny funktion som läser version, kan "old_code" tas bort i models-filen
@@ -737,13 +735,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Stängt sessionen efter lyckad validering av certifikat i ValidateCert
 - Hantering av undantag (exceptions) i funktioner som läser json-filer
 	
-## [2.2.2]
+## 2.2.2
 ### Fixed
 - Fel vid uppgradering när flashen redan innehåller filen, men inte är den aktiva
 - Fel i accessport gjorde att en rad inte provisionerades i normala fall
 - URL för nedladdning av secrets-filen var felkonstruerad
 
-## [2.2.1]
+## 2.2.1
 ### Added
 - Nu snabbare att skriva kommandon i cli
 - Detekterar tidigare provisionerad switch
@@ -760,7 +758,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixat fel i Ping
 - C9300-24S har inga accessportar, men scriptet trodde det. Är nu fixat
 
-## [2.2.0]
+## 2.2.0
 ### Added
 - Jag har överarbetat hur menyn byggs, men nu mer programmatiskt korrekt
 - Uppgraderingsport tas nu fram dynamiskt istället för statiskt från modelno.csv
@@ -779,13 +777,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Alternativ 13, extern accessport, är något uppstädad för bredare användningsområde
 - Solarwinds discovery anpassat för C9300
 
-## [2.1.1]
+## 2.1.1
 ### Added 
 - Förbättrad hantering av PSN-noder 
 ### Fixed
 - Regex för verifiering av vlan felar på nummer som slutar med en nolla, exempelvis 40
 
-## [2.1.0]
+## 2.1.0
 ### Added
 - Menyalternativ fyra som tar bort en enhet från Solarwinds och ISE, med validering att enbart en ip för accessnäten väljs
 - Verifiering av certifikat är nu modulär, minskar komplexitet vid nya integrationer
@@ -793,7 +791,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Call-home kan fela när den namnupplöser över ipv6 istället för ipv4
 
-## [2.0.4]
+## 2.0.4
 ### Added
 - Login block vid upprepade inloggningsförsök
 - Kräver ny modul, python-certifi-win32, som läser lokala certifikat i Windows
@@ -807,23 +805,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Felstavning som påverkade portskapande för 3560CG, felaktig sträng
 - Fel som kraschade scriptet i menyalternativ 10, använde fel variabel
 	
-## [2.0.3]
+## 2.0.3
 ### Added
 - Trunkar blir inte längre unplugged i menyalternativ 3
 ### Fixed
 - Använda Orion SDK för IPAM integrationen precis som andra delar som talar med Solarwinds API
 
-## [2.0.2]
+## 2.0.2
 ### Fixed
 - Cisco USB-adapter svarar med pid och vid som NoneType, vilket kraschar scriptet
 	
-## [2.0.1]
+## 2.0.1
 ### Added
 - Randomisera ordningen för ip till dns, mnt-nod, ntp och psn-nod för att "lastbalansera"
 - Tagit bort ett par rutor med positiv status som krävde interaktivitet i onödan
 - Tagit bort Energywise
 
-## [2.0.0]
+## 2.0.0
 ### Added
 - Översatt till Python 3.8
 - Menysystem ersätter de separata scripten
@@ -846,7 +844,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Caveat
 - Menyalternativ tre ger ingen feedback när det fungerar, och det tar en stund
 
-## [1.9.2]
+## 1.9.2
 - Optimerat kod
 - C9k saknade en trap för smart-license
 - Funktion för paus efter ett range-kommando
@@ -854,25 +852,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Caveat
 - Sista versionen med stöd för VBScript
 
-## [1.9.1]
+## 1.9.1
 - Rättat ordning när externa kodblock laddas
 - Verifiering att det är en seriell session och inte ssh
 - Problem med C9k som numera använder ny metod för uppgradering. Gjort om hela funktionen UpgradeCheck
 	
-## [1.9.0]
+## 1.9.0
 - Flyttar ut kodblock gemensamma i externa filer som laddas efter behov. Förenklar uppdateringen av kod mellan scripten
 - Verifierar all inmatning så att det är rätt formaterat. Skall hindra krasch när felaktigt värde matas in
 
-## [1.8.2]
+## 1.8.2
 - Optimerat Do…Loop
 - Fixat fel i mode detektering som ibland inte fungerade om text skrevs till console av switchen
 - Konsekvent användande av network(0)
 
-## [1.8.1]
+## 1.8.1
 - Rättat ett fel rörande med C9300-NM-8X
 - Automatiserat dialogen runt C9300-NM-8X
  
-## [1.8.0]
+## 1.8.0
 - Rättat dialogtext
 - Rensat rester av uppdatering av C9K-modeller
 - Ny models-fil med ny image för C9K
@@ -886,7 +884,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Om secretfile är inaktuell, öppnas ett nytt fönster där du kan ladda ned ny
 - Detektering av exec, priv exec och config mode
  
-## [1.7.3]
+## 1.7.3
 - Nätverks variablerna lagras nu i en separat fil så att man slipper editera koden inuti scriptet om detta skulle ändras. Introducerar därmed filen networks.csv på gemensam filyta.
 - Scripten för enstaka portar har nu fått stöd för att köras på vilken port som helst i switchen.
 - Går tillbaka till klassisk uppgradering på C9K
@@ -894,7 +892,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ändrat FreeMem till en function
 - Ändrat ordning för aes kryptering för typ 0 lösenord är på väg bort i c9k
  
-## [1.7.2]
+## 1.7.2
 - Lagt till stöd för L3-tjänsten i KBN
 - Stöd för dhcp snooping
 - Stöd för IBNS 2.0 som är valbart på utvalda switchmodeller
@@ -902,7 +900,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rättat fel i CleanFlash-modulen för 2960X
 - Ändrat paus i SendLine till 175ms
  
-## [1.7.1]
+## 1.7.1
 - Problem med uppgraderingsmodulen. Skrivit om mycket kod för att hantera en egenhet som gör att ftp ibland inte fungerar.
 - Ytterligare städat dialoger
 - Bättre felhantering
@@ -910,7 +908,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Två fel i global för 2960 med 15.0
 - Lagt till funktion för flow-control som gör att man slipper specialinställningar i sessionen
  
-## [1.7.0]
+## 1.7.0
 - Städat koden som hade blivit svår att hålla uppdaterad
 - Fixat ett fel som reserverade ip vid uppgradering
 - Fixat verifiering av korrekt vlan
@@ -919,18 +917,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Städat variabler
 - Uppgradering felar ibland. Lade in 15sek fördröjning innan ftp-överföring
  
-## [1.6.3]
+## 1.6.3
 - Integration av Solarwinds för att hitta nästa lediga ip och markera den Reserved
  
-## [1.6.2]
+## 1.6.2
 - Verifiering av switchnamn och ip mot ISE ifall de redan finns
  
-## [1.6.1]
+## 1.6.1
 - Ändrat ordning för factory default. Fick alltid upp en fråga om att spara konfig
 - Lagt till modul för ISE REST API som lägger till switchen som en ny network device
 - Kontroll av version på secrets.dat
  
-## [1.6.0]
+## 1.6.0
 - Introducerar fil för switchmodeller och dess unika inställningar
 - Introducerar fil för nycklar, token och lösenord
 - Fixat fel i uppdateringsmodulen som gjorde att felaktig konfiguration sparades vid omstart
