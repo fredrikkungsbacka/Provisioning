@@ -9,20 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2024.2.2]
 ### Fixed
-- Problem med referens till filnamn för byggnadsregistret i settings.ini
+- Problem med referens till filnamn för byggnadsregistret i settings.json
 - Payload felaktig vid discovery i Solarwinds på grund av felaktig placering av ny funktion
 
 ## [2024.2.1]
 ### Added
 - Stöd för SecureCRT 9.5
 - Check_web_server har snabbats upp
-- Copyright borttagen då den inte krävs sedan år 2000
 - Uppslag i byggnadsregistret görs om
 - Ny namnstandard för hostname
 - När åldern på ett lösenord för ett AD-konto i Passbolt närmar sig 30 dagar innan tvingande byte, kommer användaren bli uppmanad en gång per dag tills det är bytt.
 - Det går nu att lägga till endpoints utan att de tidigare har anslutit till nätverket
 - Varning om en ny nod i Solarwinds finns i ignore list
-- "Remove node…" omdöpt till "Delete node…"
 - Ny funktion för backup av delade resurser i Passbolt
 ### Fixed
 - Unpluggable sattes fel på accessportar (10-15)
@@ -31,12 +29,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Utökad loggning vid borttagning från Solarwinds
 - Slutade hantera serieportar när en ogiltig port påträffades
 - PID och VID för Ciscos USB-adapter presenteras inte längre av Windows
+### Changed
+- "Remove node…" omdöpt till "Delete node…"
+- Copyright borttagen då den inte krävs sedan år 2000
 
 ## [2023.10.2]
 ### Added
 - Stöd för RESTCONF
-- Ökad säkerhet för NETCONF-YANG
-- Ökad separation av användningen av variabeln secret
 - Verifiering av användardata från Passbolt
 ### Fixed
 - Loop när enhet läggs till för övervakning i DNA-Center
@@ -45,18 +44,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fel vid generering av csr
 - Flera fel vid generering av pfx
 - Efter byte av namn i alternativ fem, misslyckas inloggning då location inte blir korrekt satt
+### Security
+- Ökad säkerhet för NETCONF-YANG
+- Ökad separation av användningen av variabeln secret
 
 ## [2023.10.1]
 ### Added
 - Tar bort backup av SecureCRT då den kräver en mer avancerad hantering än vad som är värt besväret
 - Optimerat koden för integrationen med Passbolt
 - Stöd för Catalyst 9300-24U
-- Högre och konfigurerbar säkerhet vid användning av Powershell
 ### Fixed
 - Hade missat att lägga till Passbolt för alternativ 43
 - Kunde få ett fel när install remove inactive är klar då raden klipptes när systemet väntade
 - Source interface kunde inte sättas korrekt för ip http client
 - Krasch när fel lösenord hämtades från Passbolt för Powershell
+### Security
+- Högre och konfigurerbar säkerhet vid användning av Powershell
 
 ## [2023.9.4]
 ### Added
@@ -195,6 +198,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fel i menyn i alternativ 20 åtgärdat
 - Glömt att migrera snmp contact till settings.json
 - SNMP contact fanns dubbelt
+### Deprecated
 - Tar bort stöd för Python 3.10 då en modul inte stödjer detta
 
 ## [2023.2.3]
@@ -845,6 +849,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - C9k saknade en trap för smart-license
 - Funktion för paus efter ett range-kommando
 - Optimerat CleanFlash för att använda funktionen FindImage
+### Caveat
+- Sista versionen med stöd för VBScript
 
 ## [1.9.1]
 - Rättat ordning när externa kodblock laddas
