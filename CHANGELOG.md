@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2024.2.3]
+- Coming soon!
+
 ## [2024.2.2]
 ### Fixed
 - Problem med referens till filnamn för byggnadsregistret i settings.ini
@@ -100,11 +103,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Stöd för att lägga till KBN-enheter i övervakningen
 - Ny och säkrare hantering av behörigheter
-- Stöd för Python 3.11, tar bort stöd för 3.9
-- Slutar använda OrionSDK till fördel för den mer generella requests, då det är dåligt uppdaterat och saknar en hel del funktioner
+- Stöd för Python 3.11.
 - Alla delar som använder requests delar nu en gemensam funktion för detta så att alla anrop får samma egenskaper
 - I alternativ 2 detekteras om horizontal stack är aktivt, och avbryter om så är fallet
-- Tar bort stöd för SecureCRT version 9.3
 - Ny struktur för object och värden i sessioner
 - Får nu en fråga efter provisionering ifall switchen skall adderas för monitorering
 - Tar bort alternativ 99, tar plats och används inte
@@ -119,6 +120,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hade missat detektering av os och plattform vid uppdatering av Python
 - Nyckelfel vid nedladdning av uppdaterad nyckel
 - Get_stack detekterar inte switchar där virtual stack måste aktiveras korrekt
+### Deprecated
+- Rar bort stöd för 3.9
+- Slutar använda OrionSDK till fördel för den mer generella requests, då det är dåligt uppdaterat och saknar en hel del funktioner
+- Tar bort stöd för SecureCRT version 9.3
 ### Changed
 - Begränsa LLDP på trunkar och extern accessport. Detta kokar ned tabellen till enbart de enheter som syns på en lokal accessport
 
@@ -152,7 +157,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2023.4.2]
 ### Added
-- Stöd för SecureCRT version 9.2 tas bort
 - Funktionen cisco_encrypt använder nu modulen hashlib istället för scrypt, som utgår
 - Snabbat upp skrift till skärm genom att inte lässa sessions-config varje gång funktionen crt_sendline anropas
 - Huvudet i menyn byggs nu helt dynamiskt då cli och gui har olika spacing för tecken
@@ -160,6 +164,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fel i verifiering av servrar i alternativ 3
 - Cisco_encrypt visade sig formatera Cisco typ 8 och 9 nycklar felaktigt
+### Deprecated
+- Stöd för SecureCRT version 9.2 tas bort
 
 ## [2023.4.1]
 ### Fixed
@@ -208,8 +214,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Återanvändning av öppna flikar med seriesessioner kunde fallera i vissa fall
 - Kontroll av antalet serieportar skall bara kontrollera godkända adaptrar från listan
 ### Changed
-- Mitigerar CVE-2023-20076
 - Reload sker nu sist i alternativ 2
+### Security
+- Mitigerar CVE-2023-20076
 
 ## [2023.2.1]
 ### Added
@@ -276,13 +283,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.1.6]
 ### Fixed
 - Optimerad laddning av externa moduler
+### Deprecated
 - Modulen python-certifi-win32 supporteras inte längre, byts ut mot pip-system-certs
 
 ## [2.1.5]
-### Added
-- RDP-sessioner via script är från SecureCRT version 9.4 inte längre supporterat
 ### Fixed
 - Hanteringen av serieportar kunde fela i alternativ 40
+### Deprecated
+- RDP-sessioner via script är från SecureCRT version 9.4 inte längre supporterat
 
 ## [2.1.4]
 ### Added
@@ -295,7 +303,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ändrat användningen av begreppet cluster till stack, betyder olika saker
 
 ## [2.1.3]
-Nyhet
+### Added
 - Stöd för NETCONF
 - Stöd för WS-C3560CX-12PD med multigig trunkportar
 ### Fixed
@@ -360,9 +368,6 @@ Nyhet
 - Device classifier aktiveras nu som standard
 
 ## [2.9.5]
-### Fixed
-- Missförstånd med en funktion i API gjorde att en flik där script körs, fortfarande försökte stängas (från 2022.9.2)
-- Inkonsekvent syftning i text och kommentarer
 ### Added
 - Quickfix avslutas om ett felaktigt kommando påträffas
 - Applicerar protocol NO-OP på alla SSH-sessioner
@@ -372,6 +377,9 @@ Nyhet
 ### Changed
 - Ställer in högsta möjliga STP prioritet som standard
 - Vid konfiguration av KBN trunkport tas den höga STP prioriteten bort så att switch blir root
+### Fixed
+- Missförstånd med en funktion i API gjorde att en flik där script körs, fortfarande försökte stängas (från 2022.9.2)
+- Inkonsekvent syftning i text och kommentarer
 
 ## [2.9.4]
 ### Fixed
@@ -404,8 +412,6 @@ Nyhet
 ### Added
 - Ny versionsnumrering som bygger på datum och ett löpande versionsnummer
 - Verifierar lokal sync av delade filer från Infras teams-kanal
-- Tar bort stödet för SecureCRT 9.0 och 9.1
-- Tar bort stöd för Python 3.8
 - Optimerat hanteringen av installerade moduler
 - Aktiverar automatisk uppdatering (Nyhet i SecureCRT 9.3)
 - Stöd för switchen C9200L-24PXG-4X
@@ -416,7 +422,6 @@ Nyhet
 - Sessionernas flik får ett namn efter vad de används till för tillfället
 - Stöd för alla kända Prolific och FTDI chipsets
 - Uppdatering av installerad Python
-- Tar bort stöd för MacOS, men bibehåller möjlighet att skala till andra os i framtiden
 - Optimerat överföringen av uppgifter mellan moduler för SSH
 - Hantering av idle-timeout i alla sessioner
 ### Fixed
@@ -427,6 +432,10 @@ Nyhet
 - "Auto qos global compact" stöds från 15.2.7
 - SNMP location tillåter nu mer kombinationer
 - Sätter inställning för delay i sessioner så att förutsättningar i scriptet stämmer när det körs
+### Deprecated
+- Tar bort stödet för SecureCRT 9.0 och 9.1
+- Tar bort stöd för Python 3.8
+- Tar bort stöd för MacOS, men bibehåller möjlighet att skala till andra os i framtiden
 
 ## [2.6.8]
 ### Added
@@ -520,8 +529,7 @@ Nyhet
 ### Added
 - Likriktat alla input-dialoger
 - Tydligare informationsrutor
-- Nya alternativ 30 ger möjlighet att se var en enhet är ansluten genom dess mac. Man ges även möjlighet att ansluta till switchen som enheten
-ansluter till om det sker trådat.
+- Nya alternativ 30 ger möjlighet att se var en enhet är ansluten genom dess mac. Man ges även möjlighet att ansluta till switchen som enheten ansluter till om det sker trådat.
 ### Changed
 - aaa accounting update newinfo periodic 15 (Ändrat från 2880 minuter)
 
@@ -626,8 +634,8 @@ ansluter till om det sker trådat.
 - Möjlighet att detektera StackWise
 ### Changed
 - AccessPort:
-    Port-security städades
-	  Authentication event städades
+  Port-security städades
+  Authentication event städades
 
 ## [2.3.7]
 ### Fixed
@@ -704,7 +712,7 @@ ansluter till om det sker trådat.
 - Med ny funktion som läser version, kan "old_code" tas bort i models-filen
 - MAC-validering stödjer nu ett till format: utan avgränsare
 - Städat bland funktioner så att returnerat värde har samma format i alla applicerbara funktioner
-- ### Changed Flyttat device-sensor och device-tracker så att de även kommer med om man inte vill ha ISE
+- Flyttat device-sensor och device-tracker så att de även kommer med om man inte vill ha ISE
 - Stöd för SecureCRT version 9.1
 - Automatisk installation och uppdatering av moduler
 - Stöd för personliga inställningar som lagras lokalt på datorn
@@ -736,8 +744,8 @@ ansluter till om det sker trådat.
 - Validering av macadress i meny 5
 - Smart license är nu skalbar för framtida modeller genom "smartlicense" i models.json
 - Management över L3 bestäms genom "layer3" i models.json
-- ### Changed Valbart stöd för IBNS 2.0, genom "ibns2" i models.json och networks.json (beta)
-- ### Changed Terminalens bredd ändrad till 150 tecken
+- Valbart stöd för IBNS 2.0, genom "ibns2" i models.json och networks.json (beta)
+- Terminalens bredd ändrad till 150 tecken
 - Meny 5 kan nu ta en kommaseparerad lista av macadresser
 - Förfinat hur access och trunkportar selekteras, tagit bort ett modellberoende i koden
 - Smart license går nu mot egen intern server
@@ -752,7 +760,7 @@ ansluter till om det sker trådat.
 - Uppgraderingsport tas nu fram dynamiskt istället för statiskt från modelno.csv
 - All inläsning av inställningar sker numera från JSON-filer
 - Verifiering av certifikat sker nu som standard
-- ### Changed Exec-timeout ökas från fem minuter till 15
+- Exec-timeout ökas från fem minuter till 15
 - Flyttat all modellspecifik information till JSON-fil
 - Kontroll av förkrav flyttad till egen funktion, som dessutom enbart exekveras vid uppstart
 - Selektivt styra per vlan om karantän, telefoni eller ISE skall användas i networks.json
@@ -777,11 +785,11 @@ ansluter till om det sker trådat.
 - Verifiering av certifikat är nu modulär, minskar komplexitet vid nya integrationer
 - Uppdaterat matchning av interfacenamn att klara av 100Gb och 200Gb interface, samt stöd för Nexus
 ### Fixed
-- ### Changed Call-home kan fela när den namnupplöser över ipv6 istället för ipv4
+- Call-home kan fela när den namnupplöser över ipv6 istället för ipv4
 
 ## [2.0.4]
 ### Added
-- ### Changed Login block vid upprepade inloggningsförsök
+- Login block vid upprepade inloggningsförsök
 - Kräver ny modul, python-certifi-win32, som läser lokala certifikat i Windows
 - Validering av certifikat i integrationen med ISE och Solarwinds
 - Verifiering att API svarar korrekt innan menyalternativ exekveras
