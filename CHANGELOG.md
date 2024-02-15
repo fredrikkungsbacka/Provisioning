@@ -3,8 +3,26 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), and this project adheres to Calendar Versioning(https://calver.org/).
 
+## Template
+### Added
+- New features
+### Changed
+- Changed behaviour
+### Fixed
+- Fixed bugs
+### Caveat
+- Things to take note off
+### Security
+- Security related fixes
+### Deprecated
+- Removed features
+
 ## 2024.2.3
-- Coming soon!
+### Added
+- DHCP relay agent för extern accessport adderas vid behov
+### Fixed
+- Line send delay saknades för cmd
+- WaitForString i samband med CMD hanterades felaktigt på grund av bug
 
 ## 2024.2.2
 ### Fixed
@@ -844,6 +862,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 - Menyalternativ tre ger ingen feedback när det fungerar, och det tar en stund
 
 ## 1.9.2
+### Changed
 - Optimerat kod
 - C9k saknade en trap för smart-license
 - Funktion för paus efter ett range-kommando
@@ -852,82 +871,106 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 - Sista versionen med stöd för VBScript
 
 ## 1.9.1
+### Fixed
 - Rättat ordning när externa kodblock laddas
 - Verifiering att det är en seriell session och inte ssh
 - Problem med C9k som numera använder ny metod för uppgradering. Gjort om hela funktionen UpgradeCheck
 	
 ## 1.9.0
+### Added
 - Flyttar ut kodblock gemensamma i externa filer som laddas efter behov. Förenklar uppdateringen av kod mellan scripten
 - Verifierar all inmatning så att det är rätt formaterat. Skall hindra krasch när felaktigt värde matas in
 
 ## 1.8.2
+### Fixed
 - Optimerat Do…Loop
 - Fixat fel i mode detektering som ibland inte fungerade om text skrevs till console av switchen
 - Konsekvent användande av network(0)
 
 ## 1.8.1
+### Fixed
 - Rättat ett fel rörande med C9300-NM-8X
 - Automatiserat dialogen runt C9300-NM-8X
  
 ## 1.8.0
-- Rättat dialogtext
-- Rensat rester av uppdatering av C9K-modeller
+### Added
 - Ny models-fil med ny image för C9K
-- Fix för kvarlämnad konf för default-gateway eller route efter uppgradering har utförts
 - Ny switch C9300-24S som enbart innehåller trunkportar
 - Automatiserat upptäckt av befintliga vlan och management vlan i script för enstaka portar
-- Ändrat hantering av skapandet av trunkportar. Bytt från subrutin till funktion
-- Ändrat skapandet av ise-portar. Bytt från subrutin till funktion
-- Via ISE Accessport kan nu även klassiska trunkportar bli accessport med ISE
 - Detektering av 8x10Gb modul i C9300
 - Om secretfile är inaktuell, öppnas ett nytt fönster där du kan ladda ned ny
 - Detektering av exec, priv exec och config mode
+### Changed
+- Ändrat hantering av skapandet av trunkportar. Bytt från subrutin till funktion
+- Ändrat skapandet av ise-portar. Bytt från subrutin till funktion
+- Via ISE Accessport kan nu även klassiska trunkportar bli accessport med ISE
+### Fixed
+- Rättat dialogtext
+- Rensat rester av uppdatering av C9K-modeller
+- Fix för kvarlämnad konf för default-gateway eller route efter uppgradering har utförts
  
 ## 1.7.3
+### Added
 - Nätverks variablerna lagras nu i en separat fil så att man slipper editera koden inuti scriptet om detta skulle ändras. Introducerar därmed filen networks.csv på gemensam filyta.
 - Scripten för enstaka portar har nu fått stöd för att köras på vilken port som helst i switchen.
-- Går tillbaka till klassisk uppgradering på C9K
 - Tagit bort sidbrytning som kom med C9k i vissa funktioner
+### Changed
+- Går tillbaka till klassisk uppgradering på C9K
 - Ändrat FreeMem till en function
 - Ändrat ordning för aes kryptering för typ 0 lösenord är på väg bort i c9k
  
 ## 1.7.2
+### Added
 - Lagt till stöd för L3-tjänsten i KBN
 - Stöd för dhcp snooping
 - Stöd för IBNS 2.0 som är valbart på utvalda switchmodeller
 - Lagt in en ACL för VTY access, som är best-practise
-- Rättat fel i CleanFlash-modulen för 2960X
+### Changed
 - Ändrat paus i SendLine till 175ms
+### Fixed
+- Rättat fel i CleanFlash-modulen för 2960X
+
  
 ## 1.7.1
-- Problem med uppgraderingsmodulen. Skrivit om mycket kod för att hantera en egenhet som gör att ftp ibland inte fungerar.
+### Added
+- Lagt till funktion för flow-control som gör att man slipper specialinställningar i sessionen
+### Changed
 - Ytterligare städat dialoger
 - Bättre felhantering
+### Fixed
+- Problem med uppgraderingsmodulen. Skrivit om mycket kod för att hantera en egenhet som gör att ftp ibland inte fungerar.
 - Glömt aktivera CleanFlash i version ## 1.7.0
 - Två fel i global för 2960 med 15.0
-- Lagt till funktion för flow-control som gör att man slipper specialinställningar i sessionen
  
 ## 1.7.0
-- Städat koden som hade blivit svår att hålla uppdaterad
-- Fixat ett fel som reserverade ip vid uppgradering
-- Fixat verifiering av korrekt vlan
+### Added
 - Verifierat uppgradering av C9K
+### Changed
+- Städat koden som hade blivit svår att hålla uppdaterad
 - Likriktat konfig runt popup rutor samt städat antal och standardval
 - Städat variabler
+### Fixed
+- Fixat ett fel som reserverade ip vid uppgradering
+- Fixat verifiering av korrekt vlan
 - Uppgradering felar ibland. Lade in 15sek fördröjning innan ftp-överföring
  
 ## 1.6.3
+### Added
 - Integration av Solarwinds för att hitta nästa lediga ip och markera den Reserved
  
 ## 1.6.2
+### Added
 - Verifiering av switchnamn och ip mot ISE ifall de redan finns
  
 ## 1.6.1
-- Ändrat ordning för factory default. Fick alltid upp en fråga om att spara konfig
+### Added
 - Lagt till modul för ISE REST API som lägger till switchen som en ny network device
 - Kontroll av version på secrets.dat
- 
+### Changed
+- Ändrat ordning för factory default. Fick alltid upp en fråga om att spara konfig
+
 ## 1.6.0
+### Added
 - Introducerar fil för switchmodeller och dess unika inställningar
 - Introducerar fil för nycklar, token och lösenord
 - Fixat fel i uppdateringsmodulen som gjorde att felaktig konfiguration sparades vid omstart
