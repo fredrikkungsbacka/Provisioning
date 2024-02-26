@@ -13,8 +13,4 @@ It provides integration with:
 - Passbolt
 - Solarwinds
 
-The script and its all of its components are subject to confidentiality and may not be distributed to anyone other than authorized personnel for its express purpose.
-
-For Kungsbacka kommun internal use only!
-
 Copyright 2018 by Kungsbacka kommun
