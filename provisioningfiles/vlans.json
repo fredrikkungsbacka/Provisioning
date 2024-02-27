@@ -1,0 +1,14 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Vlans file to main python script",
+    "notice": "Please read README.md",
+    "version": "2024-02-27"
+  },
+  "1": {
+    "name": "",
+    "usage": false,
+    "profile": false,
+    "relayagent": false
+  }
+}

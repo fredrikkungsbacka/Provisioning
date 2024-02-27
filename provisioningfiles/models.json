@@ -1,0 +1,41 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Models file to main python script",
+    "notice": "Please read README.md",
+    "version": "2024-02-27"
+  },
+  "WS-C3560CX-8PC-S": {
+    "interfaces": {
+      "access": [
+        ["gi0/", "1", "8"]
+      ],
+      "trunk": [
+        ["gi0/", "9", "12"]
+      ],
+      "mgmtport": false,
+      "notused": false,
+      "modules": false
+    },
+    "image": {
+      "filename": "c3560cx-universalk9-mz.152-7.E9.bin",
+      "checksum": "6a7d278346f2f2cca86306f74159d067",
+      "version": "15.2.7.E9",
+      "path": "/Switch/3560cx/",
+      "installmode": false,
+      "xe": false,
+      "free": "25000000"
+    },
+    "isl": false,
+    "stacking": false,
+    "hstack": false,
+    "energywise": true,
+    "smartlicense": false,
+    "layer3": true,
+    "ibns2": true,
+    "hmac": "sha2",
+    "master_encryption": true,
+    "eem": true,
+    "voice": true
+  }
+}

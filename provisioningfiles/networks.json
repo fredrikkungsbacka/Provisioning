@@ -1,0 +1,17 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Networks file to main python script",
+    "notice": "Please read README.md",
+    "version": "2024-02-27"
+  },
+  "1": {
+    "name": "",
+    "netmask": "255.255.255.0",
+    "gateway": "192.168.1.254",
+    "voice": false,
+    "quarantine": false,
+    "ibns2": false,
+    "ise": false
+  }
+}
