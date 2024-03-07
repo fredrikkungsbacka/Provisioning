@@ -1,0 +1,8 @@
+{
+  "Header": {
+    "name": "Cisco Provisioning Script",
+    "description": "Settings file to main python script",
+    "notice": "Please read README.md",
+    "version": "2024-02-27"
+  }
+}
