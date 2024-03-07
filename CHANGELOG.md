@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), and this project adheres to Calendar Versioning(https://calver.org/).
+The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), and this project adheres to Calendar Versioning(https://calver.org/).
 
 <details>
 
@@ -22,19 +22,29 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 - Things to take note off
 
 ### Security
-- Security related fixes
+- Security related fixes and changes
 
-### Deprecated
+### Removed
 - Removed features
 
 </details>
 
-## 2024.2.3
+## Unreleased
+- Inget just nu
+
+## 2024.3.1
 ### Added
-- DHCP relay agent för extern accessport adderas vid behov
+- DHCP relay agent för extern accessport adderas nu vid behov
+- Dialog för ipadress, adress och populärnamn för site
 ### Fixed
 - Line send delay saknades för cmd
 - WaitForString i samband med CMD hanterades felaktigt på grund av bug
+- Felhantering från crt_box_dialogue var inkonsekvent
+- WaitForStrings har en fördröjning när inte objektet crt används, vilket gjorde att matchning ofta missade
+- Funktionen get_model kunde ibland matcha felaktigt på kommandot
+- Delay i crt_sendline räknade fel om nästa kommando var en crt-funktion
+### Changed
+- Total omskrivning av excel_read_br för att kunna skriva om strängar med ovanliga tecken
 
 ## 2024.2.2
 ### Fixed
@@ -152,7 +162,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 - Hade missat detektering av os och plattform vid uppdatering av Python
 - Nyckelfel vid nedladdning av uppdaterad nyckel
 - Get_stack detekterar inte switchar där virtual stack måste aktiveras korrekt
-### Deprecated
+### Removed
 - Rar bort stöd för 3.9
 - Slutar använda OrionSDK till fördel för den mer generella requests, då det är dåligt uppdaterat och saknar en hel del funktioner
 - Tar bort stöd för SecureCRT version 9.3
@@ -196,7 +206,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 ### Fixed
 - Fel i verifiering av servrar i alternativ 3
 - Cisco_encrypt visade sig formatera Cisco typ 8 och 9 nycklar felaktigt
-### Deprecated
+### Removed
 - Stöd för SecureCRT version 9.2 tas bort
 
 ## 2023.4.1
@@ -227,7 +237,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 - Fel i menyn i alternativ 20 åtgärdat
 - Glömt att migrera snmp contact till settings.json
 - SNMP contact fanns dubbelt
-### Deprecated
+### Removed
 - Tar bort stöd för Python 3.10 då en modul inte stödjer detta
 
 ## 2023.2.3
@@ -316,13 +326,13 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 ## 2.1.6
 ### Fixed
 - Optimerad laddning av externa moduler
-### Deprecated
+### Removed
 - Modulen python-certifi-win32 supporteras inte längre, byts ut mot pip-system-certs
 
 ## 2.1.5
 ### Fixed
 - Hanteringen av serieportar kunde fela i alternativ 40
-### Deprecated
+### Removed
 - RDP-sessioner via script är från SecureCRT version 9.4 inte längre supporterat
 
 ## 2.1.4
@@ -465,7 +475,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/), a
 - "Auto qos global compact" stöds från 15.2.7
 - SNMP location tillåter nu mer kombinationer
 - Sätter inställning för delay i sessioner så att förutsättningar i scriptet stämmer när det körs
-### Deprecated
+### Removed
 - Tar bort stödet för SecureCRT 9.0 och 9.1
 - Tar bort stöd för Python 3.8
 - Tar bort stöd för MacOS, men bibehåller möjlighet att skala till andra os i framtiden
