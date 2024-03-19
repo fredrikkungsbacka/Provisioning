@@ -11,6 +11,5 @@ It provides integration with:
 - Cisco Firepower Management Center
 - Microsoft Active Directory
 - Passbolt
-- Solarwinds
 
 Copyright 2018 by Kungsbacka kommun
