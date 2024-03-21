@@ -34,13 +34,15 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 
 ## 2024.3.2
 ### Fixed
-- Vid addering för monitorering från alternativ 2 felade variabletypen
+- Vid addering för monitorering från alternativ 2 felade variabeltypen
 ### Added
 - När man gör en trunk verifieras att det interfacet inte är anslutet
 - Installerar modulen cryptography
+- Utökad behörighetshantering
 ### Changed
 - Timeout för WaitforString och ReadString har enats i hela scriptet
 - Förbättringar när management-vlan detekteras
+- Städat i listan över moduler som installeras, och gjort vissa beroende på gruppbehörighet
 ### Removed
 - OpenSSL.crypto.PKCS12 är inte längre supporterad, slutar använda modulen pyOpenSSL
 
