@@ -6,3 +6,4 @@
 mypy.ini
 
 provisioningfiles/byggnadsregister.xlsx
+provisioning.py
