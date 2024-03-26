@@ -32,6 +32,18 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 ## Unreleased
 - Inget just nu
 
+## 2024.4.1
+### Removed
+- Tillfälliga alternativ 99 tas bort
+
+## 2024.3.3
+### Removed
+- Tar bort stöd för SecureCRT 9.4
+### Changed
+- Använder numera en del av LM-nummer i hostnamnet istället för hela
+### Fixed
+- Lagat sönder en sökväg vid skapandet av CSR
+
 ## 2024.3.2
 ### Fixed
 - Vid addering för monitorering från alternativ 2 felade variabeltypen
