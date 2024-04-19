@@ -35,6 +35,19 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 ## 2024.4.1
 ### Removed
 - Tillfälliga alternativ 99 tas bort
+### Added
+- Stöd för Application Hosting
+- Stöd för ny switchmodell C9300X-24Y
+- Stöd för distributionsswitchar
+### Changed
+- About känner av om internet är nåbart
+- Nyckel för url och port likriktades i settings.json och script
+- Import av moduler helt enligt PEP-8
+- Flyttat Unlock och ResetCaption till mainmenu()
+- Character delay för serie-sessioner förändras och blir snabbare
+### Fixed
+- Validering av LM-nummer felade
+- Väntetid i crt_sendline räknades felaktigt
 
 ## 2024.3.3
 ### Removed
@@ -51,6 +64,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 - När man gör en trunk verifieras att det interfacet inte är anslutet
 - Installerar modulen cryptography
 - Utökad behörighetshantering
+- Installerar moduler baserat på grupptillhörighet
 ### Changed
 - Timeout för WaitforString och ReadString har enats i hela scriptet
 - Förbättringar när management-vlan detekteras
