@@ -40,14 +40,19 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 - Stöd för ny switchmodell C9300X-24Y
 - Stöd för distributionsswitchar
 ### Changed
-- About känner av om internet är nåbart
+- About känner av om internet är nåbart eller ej
 - Nyckel för url och port likriktades i settings.json och script
 - Import av moduler helt enligt PEP-8
-- Flyttat Unlock och ResetCaption till mainmenu()
+- Lagt till Unlock och ResetCaption till mainmenu()
 - Character delay för serie-sessioner förändras och blir snabbare
+- Offlinehantering av Passbolt nu i alla menyalternativ
+- Byter banner motd mot banner exec
 ### Fixed
 - Validering av LM-nummer felade
 - Väntetid i crt_sendline räknades felaktigt
+- check_exec_mode kunde avslutas efter ett enda försök
+- Tomma rader i byggnadsregistret kraschar då dessa tolkas som felaktiga objekttyper
+- När man söker efter site i byggnadsregister och väljer avbryt kraschar scriptet med KeyError
 
 ## 2024.3.3
 ### Removed
