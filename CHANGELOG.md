@@ -35,6 +35,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 ## 2024.5.2
 ### Fixed
 - Problem med verifiering av installerade moduler efter ändring i Python
+- Problem med local shell/cmd där enter tolkades fel
 ### Changed
 - Paketet Setuptools används inte längre, ersätts av importlib.metadata
 
