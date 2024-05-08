@@ -32,7 +32,13 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 ## Unreleased
 - Inget just nu
 
-## 2024.4.1
+## 2024.5.2
+### Fixed
+- Problem med verifiering av installerade moduler efter ändring i Python
+### Changed
+- Paketet Setuptools används inte längre, ersätts av importlib.metadata
+
+## 2024.5.1
 ### Removed
 - Tillfälliga alternativ 99 tas bort
 ### Added
@@ -47,12 +53,14 @@ The format is based on Keep a Changelog(https://keepachangelog.com/sv/1.1.0/), a
 - Character delay för serie-sessioner förändras och blir snabbare
 - Offlinehantering av Passbolt nu i alla menyalternativ
 - Byter banner motd mot banner exec
+- Antalet vty-linjer ökas till 32 för IOS-XE
 ### Fixed
 - Validering av LM-nummer felade
 - Väntetid i crt_sendline räknades felaktigt
 - check_exec_mode kunde avslutas efter ett enda försök
 - Tomma rader i byggnadsregistret kraschar då dessa tolkas som felaktiga objekttyper
 - När man söker efter site i byggnadsregister och väljer avbryt kraschar scriptet med KeyError
+- Formattering av populärnamnet sker efter att man godkänt
 
 ## 2024.3.3
 ### Removed
