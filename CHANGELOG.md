@@ -32,6 +32,11 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 ## Unreleased
 - Nothing yet
 
+## 2024.5.6
+### Fixed
+- Cleaned up everything that mentioned objec id and where it was validated
+- Removed redundant code in input validation
+
 ## 2024.5.5
 ### Changed
 - CA bundle file can now be specified per service
