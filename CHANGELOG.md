@@ -32,6 +32,19 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 ## Unreleased
 - Nothing yet
 
+## 2024.5.5
+### Changed
+- CA bundle file can now be specified per service
+- Restructured checks dict to be tiered
+### Fixed
+- LM-number not recognized when adding device for monitoring
+- Cannot verify DNS-record when using LM-number
+
+## 2024.5.4
+### Changed
+- No longer using computer certificate storage but a certificate bundle file
+- Using URL as input in check_web_server instead of fqdn
+
 ## 2024.5.3
 ### Changed
 - Quickfix now continues if no responce from device
