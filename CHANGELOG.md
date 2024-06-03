@@ -32,10 +32,19 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 ## Unreleased
 - Nothing yet
 
+## 2024.6.1
+### Added
+- Source interface for tacacs
+- Source interface for SNMP traps
+- Source interface for syslog
+### Removed
+- "ip device tracking probe delay 15"
+
 ## 2024.5.6
 ### Fixed
-- Cleaned up everything that mentioned objec id and where it was validated
+- Cleaned up everything that mentioned object id and where it was validated
 - Removed redundant code in input validation
+- Misspelling of variable
 
 ## 2024.5.5
 ### Changed
