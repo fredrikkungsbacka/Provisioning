@@ -42,6 +42,7 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 - Rewritten the function add_vlan to better handle renaming of preexisting vlans.
 - Line send delay is increased to 100ms
 - Using translate() and a dict instead of something homegrown
+- deswedify() changed name to trans_character()
 ### Fixed
 - New version of Pylint threw warnings on some older code. Disabled the new warnings.
 
