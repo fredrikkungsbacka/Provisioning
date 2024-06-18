@@ -29,16 +29,21 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 
 </details>
 
-## Unreleased
-- Nothing yet
-
-## 2024.6.1
+## 2024.8.1
 ### Added
-- Source interface for tacacs
-- Source interface for SNMP traps
-- Source interface for syslog
+- Source interface for tacacs.
+- Source interface for SNMP traps.
+- Source interface for syslog.
 ### Removed
-- "ip device tracking probe delay 15"
+- "ip device tracking probe delay 15".
+- References to 15.0 code.
+- Models running 15.0 code.
+### Changed
+- Rewritten the function add_vlan to better handle renaming of preexisting vlans.
+- Line send delay is increased to 100ms
+- Using translate() and a dict instead of something homegrown
+### Fixed
+- New version of Pylint threw warnings on some older code. Disabled the new warnings.
 
 ## 2024.5.6
 ### Fixed
