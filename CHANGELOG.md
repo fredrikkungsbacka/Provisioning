@@ -41,10 +41,14 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 ### Changed
 - Rewritten the function add_vlan to better handle renaming of preexisting vlans.
 - Line send delay is increased to 100ms
-- Using translate() and a dict instead of something homegrown
+- Using translate() and a dict instead of something homebrewed
 - deswedify() changed name to trans_character()
+- port-security should not be enabled together with dot1x on access ports
+- pb_decrypt() now have error handling
 ### Fixed
-- New version of Pylint threw warnings on some older code. Disabled the new warnings.
+- New version of Pylint threw warning E0606
+- Revisited and fixed older verification errors from mypy
+- App-interfaces was added for monitoring
 
 ## 2024.5.6
 ### Fixed
