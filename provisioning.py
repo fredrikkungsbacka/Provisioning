@@ -39,7 +39,7 @@ else:
   menu_headdel = "=" * round(len(max(menu_headtext.split(chr(10)), key = len)) * 0.67) # create delimiter dynamically after header length
   menu_header = f'{menu_headdel}\n{menu_headtext}\n{menu_headdel}\n' # assemble the header
 
-  crt_object.Dialog.MessageBox(f'{menu_header}\nThis is not the script!', menu_title, 16 | BUTTON_OK ) # type: ignore[name-defined] # pylint: disable=undefined-variable
+  crt_object.Dialog.MessageBox(f'{menu_header}\nThis is not the script!', menu_title, 16 | 0 )
 
 ###
 # end script
