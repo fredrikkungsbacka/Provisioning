@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), and this project adheres to Calendar Versioning(https://calver.org/).
+The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), and this project adheres to Calendar Versioning (https://calver.org/).
 
 <details>
 
@@ -28,6 +28,12 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 - Removed features
 
 </details>
+## 2024.8.1
+### Added
+- Support for SecureCRT 9.6.
+- Support for Python 3.12.
+### Removed
+- Upgrade of Python is removed from script.
 
 ## 2024.8.1
 ### Added
@@ -40,15 +46,15 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.1.0/), a
 - Models running 15.0 code.
 ### Changed
 - Rewritten the function add_vlan to better handle renaming of preexisting vlans.
-- Line send delay is increased to 100ms
-- Using translate() and a dict instead of something homebrewed
-- deswedify() changed name to trans_character()
-- port-security should not be enabled together with dot1x on access ports
-- pb_decrypt() now have error handling
+- Line send delay is increased to 100ms.
+- Using translate() and a dict instead of something homebrewed.
+- deswedify() changed name to trans_character().
+- port-security should not be enabled together with dot1x on access ports.
+- pb_decrypt() now have error handling.
 ### Fixed
-- New version of Pylint threw warning E0606
-- Revisited and fixed older verification errors from mypy
-- App-interfaces was added for monitoring
+- New version of Pylint threw warning E0606.
+- Revisited and fixed older verification errors from mypy.
+- App-interfaces was added for monitoring.
 
 ## 2024.5.6
 ### Fixed
