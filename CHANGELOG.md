@@ -28,12 +28,20 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Removed features
 
 </details>
-## 2024.8.1
+
+## 2024.10.1
 ### Added
 - Support for SecureCRT 9.6.
 - Support for Python 3.12.
+- Creation of certificate now validates if directories or files exist.
 ### Removed
 - Upgrade of Python is removed from script.
+### Changed
+- Functions using serial now share the same function.
+### Fixed
+- ps_dns_record didnt return a string when returning an error.
+- Inconsistency in the use of url in settings.json.
+- All errors derived from an try/except are converted to string.
 
 ## 2024.8.1
 ### Added
@@ -242,7 +250,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Bug in SecureCRT crashing application and/or script after a new serial session
 - Bug in option 14 where suggestions were not given when trunk ports did not exist
 ### Caveat
-- A bug causes the script and/or application to crash when you do an unlock on all tabs and then use the tab object.  
+- A bug causes the script and/or application to crash when you do an unlock on all tabs and then use the tab object.
   This means that the command that unlocked all the tabs must be removed. Also means that if a tab is locked and the script talks to it, the script crashes with the explanation that the tab is locked.
 
 ## 2023.8.1
@@ -327,7 +335,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Support for USB adapters from SiLabs
 - Support for C9200CX
 ### Fixed
-- Removes control of confreg, as that value can be displayed intermittently 
+- Removes control of confreg, as that value can be displayed intermittently
 - 1000 switches have a different syntax for jumboframes
 - In sol_update_custom there was a unique value that was moved to settings
 - Removed stack-oid as separate value, it's an effect of stackwise
@@ -663,7 +671,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 ### Added
 - The options go, locks the session when the script is executed to avoid accidental input
 - After the introduction of DNS, you can now enter both hostname, fqdn and ip address in the dialogs
-	
+
 ## 2.5.4
 ### Added
 - Also adds PTR in DNS
@@ -818,7 +826,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 ### Changed
 - Autoinstall is now disabled by default
 - "IP domain-name" is changed to "IP domain name"
-	
+
 ## 2.3.4
 ### Fixed
 - Some minor customizations after contacting support at Vandyke, and documentation
@@ -877,7 +885,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Incorrect version information for some switches in models.json
 - Closed the session after successful validation of certificates in ValidateCert
 - Handling of exceptions in functions that read json files
-	
+
 ## 2.2.2
 ### Fixed
 - Error when upgrading when the flash already contains the file, but is not the active one
@@ -921,8 +929,8 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Solarwinds discovery adapted for C9300
 
 ## 2.1.1
-### Added 
-- Improved PSN node management 
+### Added
+- Improved PSN node management
 ### Fixed
 - Regex for verifying VLAN fails on numbers ending with a zero, for example 40
 
@@ -947,7 +955,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Wrong variable in part of the if statement in a couple of places, meant that the dialog could not be ended with cancel or X
 - Misspelling affecting port creation for 3560CG, incorrect string
 - Bug crashing script in menu item 10, using wrong variable
-	
+
 ## 2.0.3
 ### Added
 - Trunks no longer get unplugged in menu item 3
@@ -957,7 +965,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 ## 2.0.2
 ### Fixed
 - Cisco USB adapter responds with pid and vid as NoneType, which crashes the script
-	
+
 ## 2.0.1
 ### Added
 - Randomize the order of ip to dns, mnt node, ntp and psn node to "load balance"
@@ -1001,7 +1009,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Fixed order when loading external code blocks
 - Verification that it is a serial session and not ssh
 - Issue with C9k that now uses new method for upgrading. Redesigned the entire UpgradeCheck function
-	
+
 ## 1.9.0
 ### Added
 - Moves out blocks of code common into external files that are loaded as needed. Simplifies updating code between scripts
@@ -1017,7 +1025,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 ### Fixed
 - Fixed a bug with the C9300-NM-8X
 - Automated dialogue around C9300-NM-8X
- 
+
 ## 1.8.0
 ### Added
 - New models file with new image for C9K
@@ -1034,7 +1042,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Corrected dialogue text
 - Cleaned up remnants of updating C9K models
 - Fix for left conf for default gateway or route after upgrade has been performed
- 
+
 ## 1.7.3
 ### Added
 - The network variables are now stored in a separate file so that you do not have to edit the code inside the script if this should change. Thus introduces the file networks.csv on a common file surface.
@@ -1044,7 +1052,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Goes back to classic upgrade on C9K
 - Changed FreeMem to a function
 - Changed order of aes encryption for type 0 passwords is on its way out in c9k
- 
+
 ## 1.7.2
 ### Added
 - Added support for the L3 service in KBN
@@ -1056,7 +1064,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 ### Fixed
 - Fixed bug in the CleanFlash module for 2960X
 
- 
+
 ## 1.7.1
 ### Added
 - Added flow-control function that eliminates special settings in the session
@@ -1067,7 +1075,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Problems with the upgrade module. Rewritten a lot of code to deal with a peculiarity that makes ftp sometimes not work.
 - Forgot to enable CleanFlash in version ## 1.7.0
 - Two failures in global for 2960 with 15.0
- 
+
 ## 1.7.0
 ### Added
 - Verified upgrade of C9K
@@ -1079,15 +1087,15 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Fixed a bug that reserved ip when upgrading
 - Fixed verification of correct vlan
 - Upgrades sometimes fail. Added 15sec delay before ftp transfer
- 
+
 ## 1.6.3
 ### Added
 - Integration of Solarwinds to find the next available ip and mark it Reserved
- 
+
 ## 1.6.2
 ### Added
 - Verification of switch name and ip against ISE if they already exist
- 
+
 ## 1.6.1
 ### Added
 - Added module for ISE REST API that adds the switch as a new network device
