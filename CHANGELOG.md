@@ -29,6 +29,20 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
+## 2024.11.1
+### Changed
+- IOx is now a variable in the models JSON file.
+- Using the API gateway function on all ISE calls.
+- Login to Passbolt is now retried three times before giving up.
+- TOTP dialog is now retried three times before giving up.
+- Passbolt functions optimized.
+### Fixed
+- Vlan detection failed when device contains multiple L3 interfaces.
+- Vlan detection failed in function add_vlan when string matched multiple vlans.
+- Fixed errors, warnings and notices from updated Pylint.
+- When using range in 11-16 an error occured that the interface was not updated in Solarwinds.
+- The function sol_update_int_unplug2 had a bad variable declaration in argument 2.
+
 ## 2024.10.1
 ### Added
 - Support for SecureCRT 9.6.
