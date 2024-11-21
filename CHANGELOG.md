@@ -35,13 +35,18 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Using the API gateway function on all ISE calls.
 - Login to Passbolt is now retried three times before giving up.
 - TOTP dialog is now retried three times before giving up.
-- Passbolt functions optimized.
+- Passbolt functions are optimized.
+- Line send delay when using SSH is increased.
 ### Fixed
 - Vlan detection failed when device contains multiple L3 interfaces.
-- Vlan detection failed in function add_vlan when string matched multiple vlans.
+- Vlan detection failed in function add_vlan() when string matched multiple vlans.
 - Fixed errors, warnings and notices from updated Pylint.
 - When using range in 11-16 an error occured that the interface was not updated in Solarwinds.
-- The function sol_update_int_unplug2 had a bad variable declaration in argument 2.
+- The function sol_update_int_unplug2() had a bad variable declaration in argument 2.
+- Errors in add_vlan() when adding certain vlans.
+- "file prompt quiet" prevented upgrade of device.
+- dns_query() failed when using hostname only.
+- Increased line send delay.
 
 ## 2024.10.1
 ### Added
