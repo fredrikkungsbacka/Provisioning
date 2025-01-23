@@ -28,6 +28,28 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Removed features
 
 </details>
+## 2025.1.1
+### Changed
+- Changes in quarantine vlan
+### Added
+- Function sol_find_unmanaged()
+- Function sol_remanage_node()
+- Menu item 6 that can manage all nodes that responds
+### Fixed
+- EEM applet was not detected correctly in menuitem12()
+
+## 2024.12.1
+### Added
+- Dialogue to approve the hostname when using menu number 2
+
+## 2024.11.3
+### Fixed
+- Misspelling in qos setting caused a crash.
+- Change in mtu jumbo threw an error.
+
+## 2024.11.2
+### Fixed
+- pb_get_secret() didnt format device secrets as it should.
 
 ## 2024.11.1
 ### Changed
