@@ -28,19 +28,30 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Removed features
 
 </details>
+
+## 2025.3.1
+### Changed
+- Optimized code for certificate bundle.
+- Optimized error checking in checks().
+- SSH cipher, mac and key exchange is optimized in crt_session_config().
+- You can now use domain suffix in mainmenu3()
+- Removed support for SecureCRT 9.5
+### Fixed
+- Problem detecting port description in menuitem16()
+
 ## 2025.1.1
 ### Changed
-- Changes in quarantine vlan
+- Changes in quarantine vlan.
 ### Added
-- Function sol_find_unmanaged()
-- Function sol_remanage_node()
-- Menu item 6 that can manage all nodes that responds
+- Function sol_find_unmanaged().
+- Function sol_remanage_node().
+- Menu item 6 that can remanage all nodes that responds.
 ### Fixed
-- EEM applet was not detected correctly in menuitem12()
+- EEM applet was not detected correctly in menuitem12().
 
 ## 2024.12.1
 ### Added
-- Dialogue to approve the hostname when using menu number 2
+- Dialogue to approve the hostname when using menu number 2.
 
 ## 2024.11.3
 ### Fixed
@@ -163,7 +174,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 ## 2024.3.3
 ### Removed
-- Removes support for SecureCRT 9.4
+- Removed support for SecureCRT 9.4
 ### Changed
 - Nowadays uses part of the LM number in the host name instead of the whole
 ### Fixed
