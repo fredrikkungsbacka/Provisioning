@@ -12,4 +12,4 @@ It provides integration with:
 - Microsoft Active Directory
 - Passbolt
 
-Copyright 2018 by Kungsbacka kommun
+Copyright 2025 by Kungsbacka kommun
