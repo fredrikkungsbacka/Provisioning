@@ -29,15 +29,25 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
+## 2025.3.2
+### Changed
+- Restructured install and update of modules in pre_checks().
+- Required modules moved to settings.json.
+- Rewritten user group part in pre_checks() and settings.json.
+- Removed group names as a string in permissions for menu_list.
+### Fixed
+- Corrected detection of domain name in mainmenu3().
+
 ## 2025.3.1
 ### Changed
 - Optimized code for certificate bundle.
 - Optimized error checking in checks().
 - SSH cipher, mac and key exchange is optimized in crt_session_config().
 - You can now use domain suffix in mainmenu3()
-- Removed support for SecureCRT 9.5
 ### Fixed
 - Problem detecting port description in menuitem16()
+### Removed
+- Removed support for SecureCRT 9.5
 
 ## 2025.1.1
 ### Changed
