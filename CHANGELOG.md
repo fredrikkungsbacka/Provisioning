@@ -29,14 +29,16 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
-## 2025.3.2
+## 2025.4.1
 ### Changed
 - Restructured install and update of modules in pre_checks().
 - Required modules moved to settings.json.
 - Rewritten user group part in pre_checks() and settings.json.
-- Removed group names as a string in permissions for menu_list.
+- Removed group names as a string in permissions for menulist.
 ### Fixed
 - Corrected detection of domain name in mainmenu3().
+### Added
+- Added support for unsupported SFPs.
 
 ## 2025.3.1
 ### Changed
