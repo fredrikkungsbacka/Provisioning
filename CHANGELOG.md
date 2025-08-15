@@ -37,6 +37,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Comments in cert_create_pfx() mentioned csr when it should be pfx.
 - Cleaned up req().
 - crt_config_object was named crt_object_config at some places.
+- "authentication open" is needed with IOS-XE
 ### Changed
 - mainmenu() now dynamically creates mainmenu_list from doc string in the global functions.
 - Hash used in cert_create_pfx() is now using SHA256.
@@ -45,7 +46,9 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 - Username passwords are entered with a 9 type of hash.
 - Logging to file is disabled as standard.
 ### Added
-- "no errdisable detect cause gbic-invalid"
+- "no errdisable detect cause gbic-invalid".
+- Support for SecureCRT 9.7.
+- Support for Python 3.14.
 
 ## 2025.4.1
 ### Changed
