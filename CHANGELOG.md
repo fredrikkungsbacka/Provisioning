@@ -29,6 +29,10 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
+## 2025.9.1
+### Changed
+- Passbolt key file can be both .asc and .txt
+
 ## 2025.8.1
 ### Fixed
 - Regex used is not synced with regexr.com.
