@@ -29,9 +29,25 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
+## 2026.1.1
+- Coming soon!
+
+## 2025.12.1
+### Changed
+- Added timeout for cable check in device_upgrade().
+- Netmask and gateway is read fron Solarwinds
+### Added
+- BPDUfilter on kbn-trunk.
+- Support for running inside a Vmware host.
+### Fixed
+- Add_vlan() did not detect vlan name correctly.
+- Support for Passbolt v5 API
+### Removed
+- "logging snmp-authfail" is deprecated.
+
 ## 2025.9.1
 ### Changed
-- Passbolt key file can be both .asc and .txt
+- Passbolt key file can be both .asc and .txt.
 
 ## 2025.8.1
 ### Fixed
