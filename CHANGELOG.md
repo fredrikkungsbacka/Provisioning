@@ -30,7 +30,10 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 </details>
 
 ## 2026.1.1
-- Coming soon!
+### Added
+- Added description to management interface
+### Changed
+- No longer using management_subnet to detect management interface
 
 ## 2025.12.1
 ### Changed
