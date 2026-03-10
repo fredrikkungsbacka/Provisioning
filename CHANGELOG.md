@@ -29,20 +29,27 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
+## 2026.3.2
+### Fixed
+- Fixed variable type error in dna_sync_device().
+- crt_connect_ssh_start() didnt use correct ssh settings from crt_session_config().
+### Changed
+- IOS-XE needs new default MAC List.
+
 ## 2026.3.1
 ### Changed
-- Cleaned up references to DNA-Center
+- Cleaned up references to DNA-Center.
 
 ## 2026.1.1
 ### Added
-- Added description to management interface
+- Added description to management interface.
 ### Changed
-- No longer using management_subnet to detect management interface
+- No longer using management_subnet to detect management interface.
 
 ## 2025.12.1
 ### Changed
 - Added timeout for cable check in device_upgrade().
-- Netmask and gateway is read fron Solarwinds
+- Netmask and gateway is read fron Solarwinds.
 ### Added
 - BPDUfilter on kbn-trunk.
 - Support for running inside a Vmware host.
