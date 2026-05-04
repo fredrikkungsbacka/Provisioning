@@ -29,6 +29,20 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
+## 2026.5.2
+- Coming soon!
+
+## 2026.5.1
+### Fixed
+- Buildning of menu in br_excel_read() has been redone
+### Changed
+- Removing support for SecureCRT 9.6
+- Changed values for authentication time values to not be set from server
+
+## 2026.3.3
+### Changed
+- Byggnadsregister is now replaced with Byggnadsrapport with a different layout.
+
 ## 2026.3.2
 ### Fixed
 - Fixed variable type error in dna_sync_device().
