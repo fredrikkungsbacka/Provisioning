@@ -29,7 +29,7 @@ The format is based on Keep a Changelog (https://keepachangelog.com/en/1.1.0/), 
 
 </details>
 
-## 2026.5.2
+## 2026.8.1
 - Coming soon!
 
 ## 2026.5.1
